@@ -1,0 +1,41 @@
+# Business Perspective: Boston House Price Prediction  
+
+## 1. Problem Context  
+Housing prices directly impact **real estate companies, banks, property investors, and governments**. Accurate price prediction enables:  
+- **Real estate agents** → Set competitive listing prices  
+- **Banks** → Assess mortgage risks  
+- **Developers** → Decide investment locations  
+- **Buyers & Sellers** → Negotiate using data-driven insights  
+
+## 2. Key Insights from Data  
+- **Positive correlation:**  
+  - More rooms (RM) → Higher house prices  
+  - Highway accessibility (RAD) → Higher property demand and value  
+
+- **Negative correlation:**  
+  - Higher crime rate (CRIM) → Reduces property values  
+  - Higher % lower-status population (LSTAT) → Reduces prices  
+
+**Business meaning:** Building or buying houses in low-crime, well-connected areas with larger rooms increases value.  
+
+## 3. Model Reliability  
+- **R² = 0.905** → Model explains ~90% of price variance  
+- **MAE ≈ $2000** → Predictions are very close to actual prices  
+
+This accuracy is acceptable for **real estate forecasting and loan approval systems**.  
+
+## 4. Business Applications  
+1. **Price Recommendation System** → Like Zillow/Redfin for buyers & sellers  
+2. **Loan Risk Assessment** → Banks use predictions to set safe mortgage limits  
+3. **Investment Strategy** → Developers & investors identify undervalued properties  
+4. **Urban Planning** → Governments improve schools, transport, and infrastructure to raise area values  
+
+## 5. Limitations & Ethics  
+- Dataset contains **biased race-related variable (`B`)** → should not be used in production.  
+- Dataset is **small & outdated (506 rows)**.  
+- Market dynamics (interest rates, economy, demand shifts) are not included.  
+
+## Business Takeaway  
+The XGBoost model shows strong predictive ability (R² = 0.905, MAE ≈ $2000).  
+It can **support real estate, banking, and urban planning decisions**.  
+For real-world use, a larger, modern, and unbiased dataset is required.  
